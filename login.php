@@ -27,10 +27,21 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
 }
 ?>
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+
 <form action="" method="post">
     Usuario: <input type="text" name="usuario">
     <br>
-    Senha: <input type="text" name="senha">
+    Senha: <input type="password" name="senha">
     <br>
     <input type="submit" value="Fazer Login">
 </form>
+
+</body>
+</html>
