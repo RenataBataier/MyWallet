@@ -1,3 +1,22 @@
+<?php 
+
+    session_start();    
+
+    $fezLogin = $_SESSION['logado'] ?? null;
+    $usuario = $_SESSION['usuario'] ?? null;
+    $nome = $_SESSION['nome'] ?? null;
+
+    if(!$fezLogin){
+        header("Location: login.php");
+    }
+    
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +25,7 @@
     <title>MyWallet</title>
 </head>
 <body>
-    
+    <h3>Olá <?= $usuario === 'admin' ? 'Admin' : $nome ?></h3>
+    <a href="logout.php">Sair</a>
 </body>
 </html>
