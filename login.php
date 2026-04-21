@@ -4,8 +4,9 @@ session_start();
 $fezLogin = $_SESSION['logado'] ?? null;
 if($fezLogin){
     header("Location: index.php");
-    exit;
 }
+
+$hashSenha = password_hash("1234", PASSWORD_DEFAULT);
 
 if($_SERVER['REQUEST_METHOD'] === "POST"){
 
@@ -13,7 +14,7 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
     $senha = $_POST['senha'] ?? null;
 
     if(!is_null($usuario) && !is_null($senha)){
-        if($usuario == "admin" && $senha == "1234"){
+        if($usuario == "admin" && password_verify($senha, $hashSenha)){
             $_SESSION['logado'] = true;
             $_SESSION['usuario'] = $usuario;
             header("Location: index.php");

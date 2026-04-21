@@ -8,6 +8,7 @@
 
     if(!$fezLogin){
         header("Location: login.php");
+        exit;
     }
     
 ?>
