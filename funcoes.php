@@ -30,5 +30,7 @@
     $percentual = ($valorDespesa / $totalDespesas) * 100;
     
     return round($percentual, 2); 
+
 }
+
 ?>
