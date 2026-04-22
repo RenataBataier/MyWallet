@@ -37,11 +37,11 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
 <body>
 
 <form action="" method="post">
-    Usuario: <input type="text" name="usuario">
-    <br>
-    Senha: <input type="password" name="senha">
-    <br>
-    <input type="submit" value="Fazer Login">
+    UTILIZADOR: <br><input type="text" name="usuario">
+    <br><br>
+    PALAVRA-PASSE: <br><input type="password" name="senha">
+    <br><br>
+    <input type="submit" value="ENTRAR NO SISTEMA">
 </form>
 
 </body>
