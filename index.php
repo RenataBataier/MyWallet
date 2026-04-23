@@ -1,7 +1,5 @@
 <?php 
-
     session_start();    
-
     require_once 'funcoes.php';
 
     $fezLogin = $_SESSION['logado'] ?? null;
@@ -33,19 +31,20 @@
         exit;
     }
 
-$saldo = calcularSaldo($_SESSION['transacoes']);
+    $saldo = calcularSaldo($_SESSION['transacoes']);
 
-$totalReceitas = 0;
-$totalDespesas = 0;
+    $totalReceitas = 0;
+    $totalDespesas = 0;
 
-foreach($_SESSION['transacoes'] as $transacao){
-    if($transacao['tipo'] === 'Receita'){
-        $totalReceitas += $transacao['valor'];
-    } else {
-        $totalDespesas += $transacao['valor'];
+    foreach($_SESSION['transacoes'] as $transacao){
+        if($transacao['tipo'] === 'Receita'){
+            $totalReceitas += $transacao['valor'];
+        } else {
+            $totalDespesas += $transacao['valor'];
+        }
     }
-}
-    
+
+    require 'header.php';
 ?>
 
 <!DOCTYPE html>
