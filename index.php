@@ -38,11 +38,11 @@ $saldo = calcularSaldo($_SESSION['transacoes']);
 $totalReceitas = 0;
 $totalDespesas = 0;
 
-foreach($_SESSION['transacoes'] as $t){
-    if($t['tipo'] === 'Receita'){
-        $totalReceitas += $t['valor'];
+foreach($_SESSION['transacoes'] as $transacao){
+    if($transacao['tipo'] === 'Receita'){
+        $totalReceitas += $transacao['valor'];
     } else {
-        $totalDespesas += $t['valor'];
+        $totalDespesas += $transacao['valor'];
     }
 }
     
