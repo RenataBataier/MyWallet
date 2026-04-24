@@ -1,5 +1,6 @@
 <?php
 session_start();
+require 'header.php';
 
 $fezLogin = $_SESSION['logado'] ?? null;
 if($fezLogin){
