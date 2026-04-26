@@ -24,7 +24,8 @@
             $_SESSION['transacoes'][] = [
                 'descricao' => $descricao,
                 'valor' => (float)$valor,
-                'tipo' => $tipo
+                'tipo' => $tipo,
+                'data' => date('d/m/Y H:i')
             ];
         } 
         header("Location: index.php");
