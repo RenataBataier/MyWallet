@@ -36,9 +36,9 @@
     }
 
         $totalDespesas = 0;
-    foreach($_SESSION['transacoes'] as $t) {
-        if($t['tipo'] === 'Despesa') {
-            $totalDespesas += $t['valor'];
+    foreach($_SESSION['transacoes'] as $transacao) {
+        if($transacao['tipo'] === 'Despesa') {
+            $totalDespesas += $transacao['valor'];
         }
     }
     
