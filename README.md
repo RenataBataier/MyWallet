@@ -45,5 +45,5 @@ Não é necessário utilizar ambientes pesados como XAMPP ou WAMP. Basta ter o P
 4. Acesse no navegador e abra o endereço: `http://localhost:8000`
 
 ---
-**Desenvolvido por:** Jonathan Blanc e Dupla
-**Projeto Acadêmico © 2024**
+**Desenvolvido por:** Jonathan Blanc e Renata Thayna Bataier Ribeiro Malfatti
+**Projeto Acadêmico © 2026**
